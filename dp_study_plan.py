@@ -13,7 +13,7 @@ import pprint as pp
 url_jobs = "https://github.com/MatthewjRay/DP_StudyPlan/raw/main/data_cleaned_2021%202.csv"
 df1 = pd.read_csv(url_jobs,index_col=0)
 job_data = df1
-url_course = "https://raw.githubusercontent.com/MatthewjRay/DP_StudyPlan/main/Courses_Levels_Hours.csv"  # Replace with the actual URL
+url_course = "https://raw.githubusercontent.com/MatthewjRay/DP_StudyPlan/main/Courses_Levels_Hours.csv"
 df2 = pd.read_csv(url_course, sep=',')
 course_data = df2
 
@@ -78,7 +78,7 @@ for index, row in course_data.iterrows():
         "subject": row["Course"],
         "level": row["Level"],
         "hours": row["Hours"],
-        "value": importance_values[row["Course"]] * competency_levels[row["Course"]]  # Multiply importance value by competency level
+        "value": importance_values[row["Course"]] * competency_levels[row["Course"]]
     }
     courses.append(course)
 
